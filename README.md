@@ -20,13 +20,14 @@ Hopefully you found this useful and informative.
 # Instructions 
 ###### These instructions assume you are using Ruby 2.5.1 on macOS. You may encounter some bugs if you use a different machine or a different version of Ruby. 
 
-1) Clone or download ths repo onto your computer. 
+1) Clone or download ths repo onto your computer by clicking the "clone or download" button at the top right of this page. 
 
 2) Open terminal and cd into the directory where you have this repo downloaded. 
 
-3) type `ls` and verify you get the following screen, or at least get something very similar with the same files showing up. If you get a different print out then you are probably in the wrong directotry. 
+3) Type `ls` and verify you get the following screen, or at least get something very similar with the same files showing up. If you get a different print out then you are probably in the wrong directotry. 
+![screen shot](https://github.com/BShowen/Linked_list_in_Ruby/blob/master/screenshots/screen_shot_1.png "screen shot")
 
-4) Now start up IRB my typing `irb` and hitting enter. 
+4) Now start up IRB by typing `irb` and hitting enter. 
 
 5) Require in the script by typing `require "./linkedlist.rb"` and you should get the response `true`. 
 
