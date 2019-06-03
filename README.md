@@ -16,3 +16,18 @@ Now lets look at a  linked list with three data elements.
 The data in a linked list can be a number of different things. I dont want to say the data can be "anything at all" because I am unsure how true that is. I am still learning. 
 
 Hopefully you found this useful and informative. 
+
+# Instructions 
+###### These instructions assume you are using Ruby 2.5.1 on macOS. You may encounter some bugs if you use a different machine or a different version of Ruby. 
+
+1) Clone or download ths repo onto your computer. 
+
+2) Open terminal and cd into the directory where you have this repo downloaded. 
+
+3) type `ls` and verify you get the following screen, or at least get something very similar with the same files showing up. If you get a different print out then you are probably in the wrong directotry. 
+
+4) Now start up IRB my typing `irb` and hitting enter. 
+
+5) Require in the script by typing `require "./linkedlist.rb"` and you should get the response `true`. 
+
+6) Create the linked list by typing `some_variable = LinkedList.new`. Please see the documentation below for how to manipulate your linked list. 
