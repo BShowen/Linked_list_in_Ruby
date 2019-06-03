@@ -33,44 +33,27 @@ class LinkedList
 
     def prepend data
         @size += 1
-        temp_node = @head
-        new_node = Node.new data
-        new_node.next_node = temp_node
-        @head = new_node
+        @head = Node.new(data, @head)
     end
 
     def at index
-        if index >= @size || index < 0
-            nil
-        else
-            temp_node = @head
-            index.times do
-                temp_node = temp_node.next_node
-            end
-            temp_node
-        end
+        return nil if index >= @size || index < 0
+        temp_node = @head
+        index.times { temp_node = temp_node.next_node }
+        temp_node
     end
 
     def pop 
-        if @size >= 2
-            rtrn_obj = @tail
-            self.at(@size - 2).next_node = nil
-            @size -= 1
-            @tail = generate_tail_node
-            rtrn_obj 
-        else
-            nil
-        end
+        return nil if @size <= 1
+        rtrn_obj = @tail
+        self.at(@size - 2).next_node = nil
+        @size -= 1
+        @tail = generate_tail_node
+        rtrn_obj 
     end
 
-    def generate_tail_node node = nil
-        if node
-            @tail = node
-        elsif @size > 0 
-            @tail = self.at(@size - 1)
-        else
-            @tail = nil
-        end
+    def generate_tail_node
+        @tail = self.at(@size - 1)
     end
 
     def contains? data, node = self.head
@@ -83,7 +66,7 @@ class LinkedList
         else
             contains?(data, node.next_node)
         end
-        # I can also implement this function with a case statement. BUt it seems to me that the if/else conditional will be easier to read and understand when I come back to this at a later date or if another dev. is reading my code. 
+        # I can also implement this function with a case statement. But it seems to me that the if/else conditional will be easier to read and understand when I come back to this at a later date or if another dev. is reading my code. 
         # case(!!node)
         # when true
         #     return true if node.value == data
@@ -104,7 +87,7 @@ class LinkedList
         end
     end
     
-    # to_s should return itself in this format "( data ) -> ( data ) -> ( data ) -> nil"
+    # to_s should return this format "( data ) -> ( data ) -> ( data ) -> nil"
     def to_s node = self.head, string = ""
         if node 
             string += "( #{node.value} ) -> "
