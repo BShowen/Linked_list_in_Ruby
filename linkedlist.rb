@@ -1,3 +1,5 @@
+require "./node.rb"
+
 class LinkedList
     attr_accessor :head, :tail, :size
     def initialize 
