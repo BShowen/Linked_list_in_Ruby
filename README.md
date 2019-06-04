@@ -116,7 +116,7 @@ new_list.find("some_data_2")
 ```
 
 ### to_s
-This function replaces Ruby's defualt to_s and returns your list in this format.
+This function replaces Ruby's defualt to_s and returns your list in this format\n
 `"( data ) -> ( data ) -> ( data ) -> nil"`
 Example
 ```
