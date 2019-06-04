@@ -35,9 +35,9 @@ Hopefully you found this useful and informative.
 
 # Documentation 
 
-###### There a number of different methods that are built into the LinkedList class that allow you to manipulate your linked list. 
+#### There a number of different methods that are built into the LinkedList class that allow you to manipulate your linked list. 
 
-##### Initialize a list
+### Initialize a list
 Calling LinkedList.new will initialize an empty linked list. The head and tail node are set to `nil` by default and the size is 0 by default. 
 Example. 
 ```
@@ -50,7 +50,7 @@ list.tail
 => nil
 ```
 
-##### append(data)
+### append(data)
 This allows you to add data to your linked list. This function returns the added node, and also accepts 0 - 1 arguments. An argument passed in will be set as the data for that appended node. If no argument is passed then the data for that node is nil. 
 Example. 
 ```
@@ -59,7 +59,7 @@ list.append("some_data")
 => #<Node:0x00007fd5bd808e60 @value="some_data", @next_node=nil>
 ```
 
-##### prepend(data)
+### prepend(data)
 This allows you to prpend data to to front of your list. This function returns the prepended node, and also accepts 0 - 1 arguments. An argument passed in will be set as the data for that prepended node. If no argument is passed then the data for that node is nil. 
 Example.
 ```
@@ -67,7 +67,7 @@ list.prepend("prepended data")
 => #<Node:0x00007fd5bd1596f0 @value="prepended data", @next_node=#<Node:0x00007fd5bd808e60 @value="some_data", @next_node=nil>>
 ```
 
-##### at(index)
+### at(index)
 This allows you to get the node at the given index. 
 Example.
 ```
@@ -75,7 +75,7 @@ list.at(1)
 => #<Node:0x00007fd5bd808e60 @value="some_data", @next_node=nil>
 ```
 
-##### pop
+### pop
 This allows you to pop/remove the last node in the list. This function accepts 0 arguments and returns the popped node. The tail node will be updated automatically. If no items can be popped then pop returns nil. 
 Example
 ```
@@ -87,7 +87,7 @@ empty_list.pop
 => nil 
 ```
 
-##### contains?(data)
+### contains?(data)
 This function allows you to see if your list contains the provided data. This function accepts only one arguemtn and returns a boolean value. This function works recursively, so an extremely large list may result in stack overflow. 
 Example
 ```
@@ -101,7 +101,7 @@ new_list.contains?("data_2")
 => true
 ```
 
-##### find(data)
+### find(data)
 This function allows you to see if your list contains the provided data, and if it does it returns the index where the data is located otherwise returns nil. This function accepts 0 - 3 arguments. Please only provide this function with 1 argument or you will receive an error or an infinite loop. This function works recursively with the last 2 arguments set by default. 
 Example
 ```
@@ -115,7 +115,7 @@ new_list.find("some_data_2")
 => 1
 ```
 
-##### to_s
+### to_s
 This function replaces Ruby's defualt to_s and returns your list in this format.
 `"( data ) -> ( data ) -> ( data ) -> nil"`
 Example
@@ -128,7 +128,7 @@ Example
     => "( some_data_1 ) -> ( some_data_2 ) -> nil"
 ```
 
-##### insert_at(index, data)
+### insert_at(index, data)
 
 
-##### reomve_at(index)
+### reomve_at(index)
