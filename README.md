@@ -153,7 +153,7 @@ list.to_s
 ### reomve_at(index)
 This function allows you to do something that is not necessarily attributed to linked lists. With this function you can insert some data into the list at a given index, similar to an array. Returns the size of the linked list. 
 Exmaple. 
-```
+```Ruby
 list.to_s 
 => "( some_data_1 ) -> ( some_data_1.5 ) -> ( some_data_2 ) -> nil"
 
