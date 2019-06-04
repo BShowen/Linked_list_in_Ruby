@@ -60,27 +60,33 @@ list.append("some_data")
 ```
 
 ### prepend(data)
-This allows you to prpend data to to front of your list. This function returns the prepended node, and also accepts 0 - 1 arguments. An argument passed in will be set as the data for that prepended node. If no argument is passed then the data for that node is nil. 
+This allows you to prepend data to to head of your list. This function returns the prepended node and also accepts 0 - 1 arguments. An argument passed in will be set as the data for that prepended node. If no argument is passed then the data for that node is nil. 
 Example.
 ```
+list = LinkedList.new
 list.prepend("prepended data")
-=> #<Node:0x00007fd5bd1596f0 @value="prepended data", @next_node=#<Node:0x00007fd5bd808e60 @value="some_data", @next_node=nil>>
+=> #<Node:0x00007fd5bd808e60 @value="some_data", @next_node=nil>
 ```
 
 ### at(index)
 This allows you to get the node at the given index. 
 Example.
 ```
+list = LinkedList.new 
+list.append("some_data_1")
+list.append("some_data_2")
 list.at(1)
-=> #<Node:0x00007fd5bd808e60 @value="some_data", @next_node=nil>
+=> #<Node:0x00007fd5bd808e60 @value="some_data_2", @next_node=nil>
 ```
 
 ### pop
 This allows you to pop/remove the last node in the list. This function accepts 0 arguments and returns the popped node. The tail node will be updated automatically. If no items can be popped then pop returns nil. 
 Example
 ```
+list = LinkedList.new
+list.append("some_data_1")
 list.pop 
-=> #<Node:0x00007fd5bd808e60 @value="some_data", @next_node=nil>
+=> #<Node:0x00007fd5bd808e60 @value="some_data_1", @next_node=nil>
 
 empty_list = LinkedList.new
 empty_list.pop
@@ -102,7 +108,7 @@ new_list.contains?("data_2")
 ```
 
 ### find(data)
-This function allows you to see if your list contains the provided data, and if it does it returns the index where the data is located otherwise returns nil. This function accepts 0 - 3 arguments. Please only provide this function with 1 argument or you will receive an error or an infinite loop. This function works recursively with the last 2 arguments set by default. 
+This function allows you to see if your list contains the provided data, and if it does it returns the index where the data is located otherwise returns nil. This function accepts 0 - 3 arguments. Please only provide this function with 1 argument (data) or you will receive an error or an infinite loop. This function works recursively with the last 2 arguments set by default. 
 Example
 ```
 new_list = LinkedList.new
@@ -116,7 +122,7 @@ new_list.find("some_data_2")
 ```
 
 ### to_s
-This function replaces Ruby's defualt to_s and returns your list in this format\n
+This function replaces Ruby's defualt to_s and returns your list in this format
 `"( data ) -> ( data ) -> ( data ) -> nil"`
 Example
 ```
@@ -129,6 +135,31 @@ Example
 ```
 
 ### insert_at(index, data)
+This function allows you to do something that is not necessarily attributed to linked lists. With this function you can insert some data into the list at a given index, similar to an array. Returns the size of the linked list. 
+Exmaple. 
+```
+list = LinkedList.new
+list.append("some_data_1")
+list.append("some_data_2")
+list.to_s 
+=> "( some_data_1 ) -> ( some_data_2 ) -> nil"
 
+list.insert_at(1, "some_data_1.5")
+=> 3
+list.to_s
+=> "( some_data_1 ) -> ( some_data_1.5 ) -> ( some_data_2 ) -> nil"
+```
 
 ### reomve_at(index)
+This function allows you to do something that is not necessarily attributed to linked lists. With this function you can insert some data into the list at a given index, similar to an array. Returns the size of the linked list. 
+Exmaple. 
+```
+list.to_s 
+=> "( some_data_1 ) -> ( some_data_1.5 ) -> ( some_data_2 ) -> nil"
+
+list.reomve_at(1)
+=> 2
+
+list.to_s 
+=> "( some_data_1 ) -> ( some_data_2 ) -> nil"
+```
