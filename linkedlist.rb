@@ -18,7 +18,7 @@ class LinkedList
     #     end
     # end
 
-    def append data
+    def append data = nil
         @size += 1
         new_node = Node.new data
         if @head == nil
@@ -31,7 +31,7 @@ class LinkedList
 
     end
 
-    def prepend data
+    def prepend data = nil
         @size += 1
         @head = Node.new(data, @head)
     end
