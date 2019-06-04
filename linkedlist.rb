@@ -115,6 +115,7 @@ class LinkedList
         index == 0 ? @head = self.at(index + 1) : self.at(index - 1).next_node = self.at(index + 1)
         @size -= 1
         generate_tail_node if index == @size 
+        @size
     end
 
 end
